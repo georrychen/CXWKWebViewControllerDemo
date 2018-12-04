@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CXWKWebBrowserController">
+            <connections>
+                <outlet property="closeButton" destination="Yql-qp-3GV" id="Mvg-zm-RtY"/>
+                <outlet property="customNavbarHeightCons" destination="UbZ-mo-Bci" id="4eg-go-MLZ"/>
+                <outlet property="moreButton" destination="T8h-dl-kam" id="ff6-iS-eeY"/>
+                <outlet property="progressView" destination="UL6-Qc-xlc" id="AGq-nB-Wa8"/>
+                <outlet property="titleLabel" destination="Lh4-5E-4Rl" id="xfM-iV-sK4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bYQ-37-R2x" userLabel="navBackgroudView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vjh-wy-nSL">
+                            <rect key="frame" x="0.0" y="20" width="58" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="58" id="5dz-yl-ald"/>
+                                <constraint firstAttribute="height" constant="44" id="EIl-8x-kBy"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <inset key="titleEdgeInsets" minX="6" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="返回" image="wk_icon_back"/>
+                            <connections>
+                                <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="zbM-M6-fc6"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yql-qp-3GV">
+                            <rect key="frame" x="68" y="27" width="40" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="8r8-up-yeV"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="关闭"/>
+                            <connections>
+                                <action selector="closeButtonClicked:" destination="-1" eventType="touchUpInside" id="1Da-HA-Xdq"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="加载中..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lh4-5E-4Rl">
+                            <rect key="frame" x="113" y="33" width="202" height="18"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8h-dl-kam" userLabel="更多">
+                            <rect key="frame" x="330" y="31" width="30" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="cQk-b0-FQ7"/>
+                            </constraints>
+                            <state key="normal" image="wk_icon_more"/>
+                            <connections>
+                                <action selector="moreButtonClicked:" destination="-1" eventType="touchUpInside" id="N1L-tS-anX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.24313725489999999" green="0.51372549020000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Vjh-wy-nSL" secondAttribute="bottom" id="01c-fV-8Ps"/>
+                        <constraint firstAttribute="trailing" secondItem="T8h-dl-kam" secondAttribute="trailing" constant="15" id="0I0-yF-u3u"/>
+                        <constraint firstAttribute="height" constant="64" id="UbZ-mo-Bci"/>
+                        <constraint firstItem="Lh4-5E-4Rl" firstAttribute="leading" secondItem="Yql-qp-3GV" secondAttribute="trailing" constant="5" id="XXp-Xh-4AE"/>
+                        <constraint firstItem="T8h-dl-kam" firstAttribute="centerY" secondItem="Vjh-wy-nSL" secondAttribute="centerY" id="YCe-F7-ejH"/>
+                        <constraint firstItem="Yql-qp-3GV" firstAttribute="centerY" secondItem="Vjh-wy-nSL" secondAttribute="centerY" id="aGq-7J-aqz"/>
+                        <constraint firstItem="Yql-qp-3GV" firstAttribute="leading" secondItem="Vjh-wy-nSL" secondAttribute="trailing" constant="10" id="bKp-9Y-W7q"/>
+                        <constraint firstItem="Lh4-5E-4Rl" firstAttribute="centerY" secondItem="Yql-qp-3GV" secondAttribute="centerY" id="gOQ-xo-Akk"/>
+                        <constraint firstItem="T8h-dl-kam" firstAttribute="leading" secondItem="Lh4-5E-4Rl" secondAttribute="trailing" constant="15" id="mVx-cH-eyw"/>
+                        <constraint firstItem="Vjh-wy-nSL" firstAttribute="leading" secondItem="bYQ-37-R2x" secondAttribute="leading" id="mlx-iJ-h0G"/>
+                    </constraints>
+                </view>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UL6-Qc-xlc">
+                    <rect key="frame" x="0.0" y="64" width="375" height="2"/>
+                    <color key="progressTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="trackTintColor" red="0.24313725489999999" green="0.51372549020000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                </progressView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="UL6-Qc-xlc" firstAttribute="top" secondItem="bYQ-37-R2x" secondAttribute="bottom" id="3Tm-tc-CKc"/>
+                <constraint firstItem="bYQ-37-R2x" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6ZM-QG-MIW"/>
+                <constraint firstItem="UL6-Qc-xlc" firstAttribute="leading" secondItem="bYQ-37-R2x" secondAttribute="leading" id="IWA-eu-3Pd"/>
+                <constraint firstItem="UL6-Qc-xlc" firstAttribute="trailing" secondItem="bYQ-37-R2x" secondAttribute="trailing" id="M1L-le-oHY"/>
+                <constraint firstItem="bYQ-37-R2x" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nTz-Pf-O5J"/>
+                <constraint firstAttribute="trailing" secondItem="bYQ-37-R2x" secondAttribute="trailing" id="vlq-7b-0Ta"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="wk_icon_back" width="15" height="15"/>
+        <image name="wk_icon_more" width="20" height="5"/>
+    </resources>
+</document>
